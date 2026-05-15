@@ -50,10 +50,36 @@ import (
 	"iter"
 	"regexp/syntax"
 	"strings"
+	"sync/atomic"
 	"unsafe"
 
 	"github.com/donge/coregex/meta"
 )
+
+// defaultConfig holds the process-wide default compilation config.
+// Initialized to meta.DefaultConfig(); can be overridden via SetDefaultConfig.
+var defaultConfig atomic.Value
+
+func init() {
+	cfg := meta.DefaultConfig()
+	defaultConfig.Store(cfg)
+}
+
+// SetDefaultConfig replaces the process-wide default Config used by Compile
+// and MustCompile. Must be called before any pattern is compiled (e.g. in
+// package init or at the very start of main).
+//
+// Example — NFA-only mode (no DFA, no prefilter overhead):
+//
+//	func init() {
+//	    cfg := coregex.DefaultConfig()
+//	    cfg.EnableDFA = false
+//	    cfg.EnablePrefilter = false
+//	    coregex.SetDefaultConfig(cfg)
+//	}
+func SetDefaultConfig(cfg meta.Config) {
+	defaultConfig.Store(cfg)
+}
 
 // stringToBytes converts string to []byte without allocation.
 // This is the Go equivalent of Rust's str.as_bytes() - a zero-cost reinterpret cast.
@@ -108,7 +134,8 @@ type Regexp = Regex
 //	    log.Fatal(err)
 //	}
 func Compile(pattern string) (*Regex, error) {
-	engine, err := meta.Compile(pattern)
+	cfg := defaultConfig.Load().(meta.Config)
+	engine, err := meta.CompileWithConfig(pattern, cfg)
 	if err != nil {
 		return nil, err
 	}
