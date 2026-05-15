@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/coregx/coregex"
+	"github.com/donge/coregex"
 )
 
 // GoAWK benchmark patterns from Ben Hoyt's testing

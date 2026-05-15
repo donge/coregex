@@ -3,7 +3,7 @@ package coregex_test
 import (
 	"fmt"
 
-	"github.com/coregx/coregex"
+	"github.com/donge/coregex"
 )
 
 // ExampleRegex_SubexpNames demonstrates named capture groups

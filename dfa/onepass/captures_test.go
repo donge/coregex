@@ -5,7 +5,7 @@ import (
 	"regexp/syntax"
 	"testing"
 
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 // compileOnePass is a helper that compiles a one-pass DFA from a pattern.

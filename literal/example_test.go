@@ -3,7 +3,7 @@ package literal_test
 import (
 	"fmt"
 
-	"github.com/coregx/coregex/literal"
+	"github.com/donge/coregex/literal"
 )
 
 // Example demonstrates basic usage of literal sequences

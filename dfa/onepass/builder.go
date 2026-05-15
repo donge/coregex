@@ -3,9 +3,9 @@ package onepass
 import (
 	"fmt"
 
-	"github.com/coregx/coregex/internal/conv"
-	"github.com/coregx/coregex/internal/sparse"
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/internal/conv"
+	"github.com/donge/coregex/internal/sparse"
+	"github.com/donge/coregex/nfa"
 )
 
 // Builder constructs a one-pass DFA from an NFA.

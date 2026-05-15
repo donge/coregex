@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"regexp/syntax"
 
-	"github.com/coregx/coregex/literal"
-	"github.com/coregx/coregex/prefilter"
+	"github.com/donge/coregex/literal"
+	"github.com/donge/coregex/prefilter"
 )
 
 // ExampleBuilder demonstrates building a prefilter from a regex pattern.

@@ -3,7 +3,7 @@ package simd_test
 import (
 	"fmt"
 
-	"github.com/coregx/coregex/simd"
+	"github.com/donge/coregex/simd"
 )
 
 // Example demonstrates basic substring search

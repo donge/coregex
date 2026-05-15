@@ -5,7 +5,7 @@ import (
 	"regexp/syntax"
 	"testing"
 
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 // compilePattern is a helper to compile a regex pattern to NFA

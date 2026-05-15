@@ -15,7 +15,7 @@ import (
 // approach: greedy/non-greedy semantics determined solely by branch order in splits
 // + break-on-first-match in the combined match-check/step loop.
 //
-// See: https://github.com/coregx/coregex/issues/124
+// See: https://github.com/donge/coregex/issues/124
 
 // TestIssue124_PikeVM_NonGreedyStar tests .*? at the PikeVM level.
 func TestIssue124_PikeVM_NonGreedyStar(t *testing.T) {

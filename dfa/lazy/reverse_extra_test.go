@@ -3,7 +3,7 @@ package lazy
 import (
 	"testing"
 
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 // TestSearchReverseMultipleMatches tests that reverse search correctly finds match start

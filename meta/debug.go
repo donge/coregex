@@ -6,8 +6,8 @@ import (
 	"regexp/syntax"
 	"strings"
 
-	"github.com/coregx/coregex/literal"
-	"github.com/coregx/coregex/prefilter"
+	"github.com/donge/coregex/literal"
+	"github.com/donge/coregex/prefilter"
 )
 
 // debugLevel controls compile-time diagnostic output.

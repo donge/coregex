@@ -3,7 +3,7 @@ package nfa
 import (
 	"fmt"
 
-	"github.com/coregx/coregex/internal/conv"
+	"github.com/donge/coregex/internal/conv"
 )
 
 // Builder constructs NFAs incrementally using a low-level API.

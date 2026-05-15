@@ -20,7 +20,7 @@ import (
 //
 // Thread safety: NOT thread-safe. For concurrent usage, each goroutine needs its own instance.
 //
-// Reference: https://github.com/coregx/coregex/issues/72
+// Reference: https://github.com/donge/coregex/issues/72
 type CompositeSearcher struct {
 	parts []*charClassPart
 

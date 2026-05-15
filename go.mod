@@ -1,4 +1,4 @@
-module github.com/coregx/coregex
+module github.com/donge/coregex
 
 go 1.25.4
 

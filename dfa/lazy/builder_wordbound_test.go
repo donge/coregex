@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 func TestBuilderMoveWithWordContextDetailed(t *testing.T) {

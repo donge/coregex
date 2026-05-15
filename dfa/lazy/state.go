@@ -5,7 +5,7 @@ import (
 	"hash/fnv"
 	"sync"
 
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 // StateID uniquely identifies a DFA state in the cache.

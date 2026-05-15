@@ -31,8 +31,8 @@
 package prefilter
 
 import (
-	"github.com/coregx/coregex/literal"
-	"github.com/coregx/coregex/simd"
+	"github.com/donge/coregex/literal"
+	"github.com/donge/coregex/simd"
 )
 
 // Prefilter is used to quickly find candidate match positions before running

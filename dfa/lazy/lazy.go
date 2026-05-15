@@ -37,9 +37,9 @@ package lazy
 import (
 	"errors"
 
-	"github.com/coregx/coregex/nfa"
-	"github.com/coregx/coregex/prefilter"
-	"github.com/coregx/coregex/simd"
+	"github.com/donge/coregex/nfa"
+	"github.com/donge/coregex/prefilter"
+	"github.com/donge/coregex/simd"
 )
 
 // DFA is a Lazy DFA engine that performs on-demand determinization.

@@ -35,7 +35,7 @@ import (
 	"bytes"
 	"math/bits"
 
-	"github.com/coregx/coregex/literal"
+	"github.com/donge/coregex/literal"
 )
 
 // Constants for Teddy configuration

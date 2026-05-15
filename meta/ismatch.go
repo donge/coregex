@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"sync/atomic"
 
-	"github.com/coregx/coregex/simd"
+	"github.com/donge/coregex/simd"
 )
 
 // IsMatch returns true if the pattern matches anywhere in the haystack.

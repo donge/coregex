@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/coregx/coregex/meta"
+	"github.com/donge/coregex/meta"
 )
 
 // TestErrorMessageFormat verifies that error messages match stdlib format.

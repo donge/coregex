@@ -3,9 +3,9 @@ package meta
 import (
 	"regexp/syntax"
 
-	"github.com/coregx/coregex/literal"
-	"github.com/coregx/coregex/nfa"
-	"github.com/coregx/coregex/prefilter"
+	"github.com/donge/coregex/literal"
+	"github.com/donge/coregex/nfa"
+	"github.com/donge/coregex/prefilter"
 )
 
 // Strategy represents the execution strategy for regex matching.
@@ -132,7 +132,7 @@ const (
 	//   2. Greedy matching: consume max chars for each part
 	//   3. Backtrack if min requirement not met
 	//
-	// Reference: https://github.com/coregx/coregex/issues/72
+	// Reference: https://github.com/donge/coregex/issues/72
 	UseCompositeSearcher
 
 	// UseBranchDispatch uses O(1) first-byte dispatch for anchored alternations.
@@ -146,7 +146,7 @@ const (
 	//   2. On search: dispatch[haystack[0]] gives branch to try
 	//   3. Only execute that single branch instead of all branches
 	//
-	// Reference: https://github.com/coregx/coregex/issues/79
+	// Reference: https://github.com/donge/coregex/issues/79
 	UseBranchDispatch
 
 	// UseDigitPrefilter uses SIMD digit scanning for patterns that must start with digits.
@@ -203,7 +203,7 @@ const (
 	//
 	// This is a specialized "literal engine bypass" for URL/path matching patterns
 	// that are extremely common in web applications and routing tables.
-	// Reference: https://github.com/coregx/coregex/issues/79
+	// Reference: https://github.com/donge/coregex/issues/79
 	UseAnchoredLiteral
 
 	// UseMultilineReverseSuffix uses line-aware suffix search for multiline patterns.
@@ -225,7 +225,7 @@ const (
 	//
 	// This fixes Issue #97 where `(?m)^/.*[\w-]+\.php` was 24% SLOWER than stdlib
 	// because UseReverseSuffix assumed match always starts at position 0.
-	// Reference: https://github.com/coregx/coregex/issues/97
+	// Reference: https://github.com/donge/coregex/issues/97
 	UseMultilineReverseSuffix
 )
 
@@ -1423,7 +1423,7 @@ func SelectStrategy(n *nfa.NFA, re *syntax.Regexp, literals *literal.Seq, config
 		//   - Wildcard (.* or .+)
 		//   - Literal suffix (required)
 		//   - Optional prefix and charclass bridge
-		// Reference: https://github.com/coregx/coregex/issues/79
+		// Reference: https://github.com/donge/coregex/issues/79
 		if isEndAnchored && DetectAnchoredLiteral(re) != nil {
 			return UseAnchoredLiteral
 		}
@@ -1465,7 +1465,7 @@ func SelectStrategy(n *nfa.NFA, re *syntax.Regexp, literals *literal.Seq, config
 	// Check for concatenated char class patterns like [a-zA-Z]+[0-9]+
 	// Uses sequential lookup tables for 5-6x speedup over BoundedBacktracker.
 	// Must come AFTER CharClassSearcher (single char class) but BEFORE BoundedBacktracker.
-	// Reference: https://github.com/coregx/coregex/issues/72
+	// Reference: https://github.com/donge/coregex/issues/72
 	if !litAnalysis.hasGoodLiterals && !litAnalysis.hasTeddyLiterals && nfa.IsCompositeCharClassPattern(re) {
 		return UseCompositeSearcher
 	}
@@ -1534,7 +1534,7 @@ func SelectStrategy(n *nfa.NFA, re *syntax.Regexp, literals *literal.Seq, config
 	// in cache. PikeVM is O(n*states) but avoids DFA construction overhead.
 	// Example: (?i)\b(eval|system|exec|...)\b has 243 NFA states — DFA
 	// cache thrashing makes it 88,000x slower than stdlib. PikeVM is ~1x.
-	// Issue #137: https://github.com/coregx/coregex/issues/137
+	// Issue #137: https://github.com/donge/coregex/issues/137
 	if nfaSize > 100 {
 		return UseNFA
 	}

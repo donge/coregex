@@ -1,7 +1,7 @@
 package lazy
 
 import (
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 // StartKind represents the look-behind context for start state selection.

@@ -395,7 +395,7 @@ func TestReverseSuffix_EdgeCases(t *testing.T) {
 // TestIssue116_AlternationWithoutWildcard tests that alternation patterns without
 // wildcard prefix (like `[cgt]gggtaaa|tttaccc[acg]`) are NOT routed to
 // UseReverseSuffixSet, which would produce wrong match positions.
-// See: https://github.com/coregx/coregex/issues/116
+// See: https://github.com/donge/coregex/issues/116
 func TestIssue116_AlternationWithoutWildcard(t *testing.T) {
 	tests := []struct {
 		name    string

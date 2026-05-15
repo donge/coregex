@@ -4,7 +4,7 @@ import (
 	"regexp/syntax"
 	"testing"
 
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 // buildDFA is a helper that compiles a pattern and builds the onepass DFA.

@@ -3,7 +3,7 @@ package lazy
 import (
 	"testing"
 
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 func TestStateAcceleration(t *testing.T) {

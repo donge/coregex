@@ -10,7 +10,7 @@
 
 package prefilter
 
-import "github.com/coregx/coregex/simd"
+import "github.com/donge/coregex/simd"
 
 // DigitPrefilter implements the Prefilter interface for patterns that must
 // start with ASCII digits [0-9].

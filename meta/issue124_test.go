@@ -16,7 +16,7 @@ import (
 // leaking from UTF-8 alternation chains. Fix: removed tookLeft/priority system,
 // replaced with Rust's DFS-ordering + break-on-first-match approach.
 //
-// See: https://github.com/coregx/coregex/issues/124
+// See: https://github.com/donge/coregex/issues/124
 
 // ---------------------------------------------------------------------------
 // Bug 2: Non-greedy PikeVM — core regression tests

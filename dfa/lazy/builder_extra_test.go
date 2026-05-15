@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 // TestBuilderEpsilonClosure tests that epsilon closure correctly follows

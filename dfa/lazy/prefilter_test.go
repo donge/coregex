@@ -4,9 +4,9 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/coregx/coregex/literal"
-	"github.com/coregx/coregex/nfa"
-	"github.com/coregx/coregex/prefilter"
+	"github.com/donge/coregex/literal"
+	"github.com/donge/coregex/nfa"
+	"github.com/donge/coregex/prefilter"
 )
 
 // buildMemmemPrefilter creates a memmem prefilter for a literal string using the public API.

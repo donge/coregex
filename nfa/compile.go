@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"regexp/syntax"
 
-	"github.com/coregx/coregex/internal/conv"
+	"github.com/donge/coregex/internal/conv"
 )
 
 // CompilerConfig configures NFA compilation behavior

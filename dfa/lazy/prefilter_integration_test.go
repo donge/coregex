@@ -3,9 +3,9 @@ package lazy
 import (
 	"testing"
 
-	"github.com/coregx/coregex/literal"
-	"github.com/coregx/coregex/nfa"
-	"github.com/coregx/coregex/prefilter"
+	"github.com/donge/coregex/literal"
+	"github.com/donge/coregex/nfa"
+	"github.com/donge/coregex/prefilter"
 )
 
 // buildDFAWithPrefilter creates a DFA with a prefilter from a single literal prefix.

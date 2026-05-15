@@ -14,7 +14,7 @@ import (
 // Fix: Use NewBuilderWithWordBoundary() to pass pre-computed flag and add
 // hasWordBoundary guards to skip unnecessary checks.
 //
-// See: https://github.com/coregx/coregex/issues/105
+// See: https://github.com/donge/coregex/issues/105
 func TestIssue105WordBoundaryPerformance(t *testing.T) {
 	// Pattern from the issue - contains \w quantifiers but NO word boundaries (\b/\B)
 	pattern := `=(\$\w{1,10}\(['"][^\)]{1,200}\)\.chr\(\d{1,64}\)\.){2}`

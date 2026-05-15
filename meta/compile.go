@@ -9,11 +9,11 @@ import (
 	"regexp/syntax"
 
 	"github.com/coregx/ahocorasick"
-	"github.com/coregx/coregex/dfa/lazy"
-	"github.com/coregx/coregex/dfa/onepass"
-	"github.com/coregx/coregex/literal"
-	"github.com/coregx/coregex/nfa"
-	"github.com/coregx/coregex/prefilter"
+	"github.com/donge/coregex/dfa/lazy"
+	"github.com/donge/coregex/dfa/onepass"
+	"github.com/donge/coregex/literal"
+	"github.com/donge/coregex/nfa"
+	"github.com/donge/coregex/prefilter"
 )
 
 // Compile compiles a regex pattern string into an executable Engine.
@@ -331,7 +331,7 @@ func buildCharClassSearchers(
 	}
 
 	// CompositeSearcher for concatenated char classes like [a-zA-Z]+[0-9]+
-	// Reference: https://github.com/coregx/coregex/issues/72
+	// Reference: https://github.com/donge/coregex/issues/72
 	if strategy == UseCompositeSearcher {
 		result.compositeSrch = nfa.NewCompositeSearcher(re)
 		if result.compositeSrch == nil {
@@ -345,7 +345,7 @@ func buildCharClassSearchers(
 	}
 
 	// BranchDispatcher for anchored alternations with distinct first bytes
-	// Reference: https://github.com/coregx/coregex/issues/79
+	// Reference: https://github.com/donge/coregex/issues/79
 	if strategy == UseBranchDispatch {
 		// Extract the alternation part (skip ^ anchor)
 		altPart := re
@@ -589,7 +589,7 @@ func CompileRegexp(re *syntax.Regexp, config Config) (*Engine, error) {
 	// This enables O(1) specialized matching for ^prefix.*suffix$ patterns.
 	// The detection was already done in SelectStrategy, but we need the info
 	// for the execution path.
-	// Reference: https://github.com/coregx/coregex/issues/79
+	// Reference: https://github.com/donge/coregex/issues/79
 	var anchoredLiteralInfo *AnchoredLiteralInfo
 	if strategy == UseAnchoredLiteral {
 		anchoredLiteralInfo = DetectAnchoredLiteral(re)

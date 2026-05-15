@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"regexp/syntax"
 
-	"github.com/coregx/coregex/literal"
+	"github.com/donge/coregex/literal"
 )
 
 // ExampleExtractor_ExtractPrefixes demonstrates basic prefix extraction

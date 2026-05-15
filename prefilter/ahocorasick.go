@@ -2,7 +2,7 @@ package prefilter
 
 import (
 	"github.com/coregx/ahocorasick"
-	"github.com/coregx/coregex/literal"
+	"github.com/donge/coregex/literal"
 )
 
 // AhoCorasickPrefilter wraps an Aho-Corasick DFA automaton as a Prefilter.

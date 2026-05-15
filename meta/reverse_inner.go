@@ -10,10 +10,10 @@ import (
 	"regexp/syntax"
 	"sync"
 
-	"github.com/coregx/coregex/dfa/lazy"
-	"github.com/coregx/coregex/literal"
-	"github.com/coregx/coregex/nfa"
-	"github.com/coregx/coregex/prefilter"
+	"github.com/donge/coregex/dfa/lazy"
+	"github.com/donge/coregex/literal"
+	"github.com/donge/coregex/nfa"
+	"github.com/donge/coregex/prefilter"
 )
 
 // isUniversalMatch checks if the given regex AST matches everything (like .*).

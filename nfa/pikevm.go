@@ -3,8 +3,8 @@ package nfa
 import (
 	"unicode/utf8"
 
-	"github.com/coregx/coregex/internal/conv"
-	"github.com/coregx/coregex/internal/sparse"
+	"github.com/donge/coregex/internal/conv"
+	"github.com/donge/coregex/internal/sparse"
 )
 
 // SearchMode determines how many capture slots to track during search.

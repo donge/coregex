@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 // newTestCache creates a DFACache for testing without needing a DFA.

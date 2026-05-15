@@ -3,9 +3,9 @@ package meta
 import (
 	"sync"
 
-	"github.com/coregx/coregex/dfa/lazy"
-	"github.com/coregx/coregex/dfa/onepass"
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/dfa/lazy"
+	"github.com/donge/coregex/dfa/onepass"
+	"github.com/donge/coregex/nfa"
 )
 
 // SearchState holds per-search mutable state for thread-safe concurrent searches.

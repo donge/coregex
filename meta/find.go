@@ -7,8 +7,8 @@ package meta
 import (
 	"sync/atomic"
 
-	"github.com/coregx/coregex/prefilter"
-	"github.com/coregx/coregex/simd"
+	"github.com/donge/coregex/prefilter"
+	"github.com/donge/coregex/simd"
 )
 
 // Find returns the first match in the haystack, or nil if no match.

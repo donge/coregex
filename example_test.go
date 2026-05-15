@@ -3,7 +3,7 @@ package coregex_test
 import (
 	"fmt"
 
-	"github.com/coregx/coregex"
+	"github.com/donge/coregex"
 )
 
 // ExampleCompile demonstrates basic pattern compilation and matching.

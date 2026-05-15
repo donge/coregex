@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"regexp/syntax"
 
-	"github.com/coregx/coregex/literal"
-	"github.com/coregx/coregex/prefilter"
+	"github.com/donge/coregex/literal"
+	"github.com/donge/coregex/prefilter"
 )
 
 // Example_teddyBasic demonstrates basic Teddy usage for multi-pattern search

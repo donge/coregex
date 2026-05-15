@@ -5,7 +5,7 @@ import (
 	"regexp/syntax"
 	"testing"
 
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 // compileAnchored compiles a pattern with anchored NFA for onepass testing.

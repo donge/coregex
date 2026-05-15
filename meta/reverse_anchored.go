@@ -3,8 +3,8 @@ package meta
 import (
 	"sync"
 
-	"github.com/coregx/coregex/dfa/lazy"
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/dfa/lazy"
+	"github.com/donge/coregex/nfa"
 )
 
 // ReverseAnchoredSearcher performs reverse search for patterns anchored at end.

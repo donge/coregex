@@ -5,8 +5,8 @@ import (
 	"regexp/syntax"
 	"testing"
 
-	"github.com/coregx/coregex/literal"
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/literal"
+	"github.com/donge/coregex/nfa"
 )
 
 // TestCompile tests basic pattern compilation

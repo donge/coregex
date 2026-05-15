@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 // TestSearchAtPositionVariations tests SearchAt and FindAt from various positions.

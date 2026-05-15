@@ -4,7 +4,7 @@ import (
 	"regexp/syntax"
 	"testing"
 
-	"github.com/coregx/coregex/literal"
+	"github.com/donge/coregex/literal"
 )
 
 // Test helper: create a literal sequence from byte slices and complete flags

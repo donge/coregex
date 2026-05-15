@@ -27,7 +27,7 @@ package onepass
 
 import (
 	"errors"
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 var (

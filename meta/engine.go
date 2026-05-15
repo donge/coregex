@@ -8,10 +8,10 @@ import (
 	"sync/atomic"
 
 	"github.com/coregx/ahocorasick"
-	"github.com/coregx/coregex/dfa/lazy"
-	"github.com/coregx/coregex/dfa/onepass"
-	"github.com/coregx/coregex/nfa"
-	"github.com/coregx/coregex/prefilter"
+	"github.com/donge/coregex/dfa/lazy"
+	"github.com/donge/coregex/dfa/onepass"
+	"github.com/donge/coregex/nfa"
+	"github.com/donge/coregex/prefilter"
 )
 
 // Engine is the meta-engine that orchestrates all regex execution strategies.

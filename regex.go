@@ -52,7 +52,7 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/coregx/coregex/meta"
+	"github.com/donge/coregex/meta"
 )
 
 // stringToBytes converts string to []byte without allocation.
@@ -86,12 +86,12 @@ type Regex struct {
 }
 
 // Regexp is an alias for Regex to provide drop-in compatibility with stdlib regexp.
-// This allows replacing `import "regexp"` with `import regexp "github.com/coregx/coregex"`
+// This allows replacing `import "regexp"` with `import regexp "github.com/donge/coregex"`
 // without changing type names in existing code.
 //
 // Example:
 //
-//	import regexp "github.com/coregx/coregex"
+//	import regexp "github.com/donge/coregex"
 //
 //	var re *regexp.Regexp = regexp.MustCompile(`\d+`)
 type Regexp = Regex

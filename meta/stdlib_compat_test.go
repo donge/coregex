@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/coregx/coregex/meta"
+	"github.com/donge/coregex/meta"
 )
 
 // TestStdlibCompatibility verifies that coregex produces identical match results

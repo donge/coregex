@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/coregx/coregex/literal"
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/literal"
+	"github.com/donge/coregex/nfa"
 )
 
 // helper: compileForReason compiles a pattern and returns the NFA, parsed AST, and literals.

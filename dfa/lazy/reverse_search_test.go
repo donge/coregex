@@ -3,7 +3,7 @@ package lazy
 import (
 	"testing"
 
-	"github.com/coregx/coregex/nfa"
+	"github.com/donge/coregex/nfa"
 )
 
 // compileReverseDFA compiles a reverse DFA from a pattern for testing reverse search.

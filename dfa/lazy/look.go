@@ -1,6 +1,6 @@
 package lazy
 
-import "github.com/coregx/coregex/nfa"
+import "github.com/donge/coregex/nfa"
 
 // LookSet is a bitset representing satisfied look-around assertions.
 // This enables efficient tracking of which assertions are true at a given position.

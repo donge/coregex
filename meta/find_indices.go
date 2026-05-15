@@ -8,8 +8,8 @@ package meta
 import (
 	"sync/atomic"
 
-	"github.com/coregx/coregex/nfa"
-	"github.com/coregx/coregex/simd"
+	"github.com/donge/coregex/nfa"
+	"github.com/donge/coregex/simd"
 )
 
 // FindIndices returns the start and end indices of the first match.

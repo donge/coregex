@@ -13,7 +13,7 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/coregx/coregex/simd"
+	"github.com/donge/coregex/simd"
 )
 
 func main() {

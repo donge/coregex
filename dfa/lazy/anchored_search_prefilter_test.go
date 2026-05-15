@@ -4,9 +4,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/coregx/coregex/literal"
-	"github.com/coregx/coregex/nfa"
-	"github.com/coregx/coregex/prefilter"
+	"github.com/donge/coregex/literal"
+	"github.com/donge/coregex/nfa"
+	"github.com/donge/coregex/prefilter"
 )
 
 // --- AlphabetLen and byteToClass nil-branch tests ---
