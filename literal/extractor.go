@@ -1193,12 +1193,19 @@ func cloneRegexp(re *syntax.Regexp) *syntax.Regexp {
 		for i, sub := range re.Sub {
 			clone.Sub[i] = cloneRegexp(sub)
 		}
-	}
-
-	// Clone Sub0 (inline storage)
-	for i := range re.Sub0 {
-		if re.Sub0[i] != nil {
-			clone.Sub0[i] = cloneRegexp(re.Sub0[i])
+		// Sub0 is inline storage backing Sub when len(Sub) <= 1.
+		// Avoid re-cloning the same nodes to prevent infinite recursion.
+		for i := range clone.Sub0 {
+			if i < len(clone.Sub) {
+				clone.Sub0[i] = clone.Sub[i]
+			}
+		}
+	} else {
+		// Sub is empty; Sub0 may hold independent pointers.
+		for i := range re.Sub0 {
+			if re.Sub0[i] != nil {
+				clone.Sub0[i] = cloneRegexp(re.Sub0[i])
+			}
 		}
 	}
 
